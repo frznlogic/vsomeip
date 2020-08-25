@@ -60,6 +60,22 @@ global:
         *vsomeip::runtime;
         vsomeip::logger::*;
         *vsomeip::logger;
+        vsomeip::runtime::get*;
+        vsomeip::runtime::set_property*;
+        *vsomeip::application_impl;
+        vsomeip::application_impl*;
+        *vsomeip::eventgroupinfo;
+        vsomeip::eventgroupinfo::*;
+        *vsomeip::servicegroup;
+        vsomeip::servicegroup::*;
+        *vsomeip::serviceinfo;
+        vsomeip::serviceinfo::*;
+        *vsomeip::sd::runtime;
+        vsomeip::sd::runtime::*;
+        *vsomeip::utility;
+        vsomeip::utility::is*;
+        *vsomeip::payload_impl;
+        vsomeip::payload_impl*;
     }; 
     vsomeip_plugin_init;
 local:

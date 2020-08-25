@@ -107,9 +107,13 @@ udp_server_endpoint_impl::udp_server_endpoint_impl(
     ::setsockopt(unicast_socket_.native_handle(), IPPROTO_IP, IP_PKTINFO,
         optval, sizeof(optval));
 #else
+#  ifdef __QNX__
+    // do nothing
+#  else
     int optval(1);
     ::setsockopt(unicast_socket_.native_handle(), IPPROTO_IP, IP_PKTINFO,
         &optval, sizeof(optval));
+#  endif
 #endif
 }
 
